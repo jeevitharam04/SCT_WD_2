@@ -1,0 +1,86 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: flex-start; /* Align items to the start (top) */
+    position: relative;
+    margin: 0;
+}
+
+/* Background image */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('stopwatch.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    z-index: -1; /* Keep it behind the content */
+}
+
+/* Stopwatch container */
+.container {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 20px; /* Optional: Add margin to create some space */
+}
+
+/* Time display styling */
+#time-display {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; /* Text color */
+    background-color: #dc3545; /* Red for all buttons */
+}
+
+/* Disabled button styling */
+.controls button:disabled {
+    background-color: #cccccc; /* Grey for disabled button */
+}
+
+/* Lap section */
+.lap-section {
+    margin-top: 20px;
+}
+
+.lap-section h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Capitalize headings */
+}
+
+#lap-list {
+    list-style: none;
+    padding: 0;
+}
+
+#lap-list li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f0f0f0; /* Light grey for lap items */
+    border-radius: 5px;
+    font-size: 0.9em;
+}
